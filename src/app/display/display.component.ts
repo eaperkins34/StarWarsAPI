@@ -1,6 +1,6 @@
 import { Injectable, OnInit, Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-'
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,7 @@ export class DisplayComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {  }
+  
   search(select: string, term: string) {
     this.http.get(`https://swapi.co/api/${select}/?search=${term}`)
     .subscribe((response) => {

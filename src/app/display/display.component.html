@@ -1,14 +1,14 @@
 <div id="seach-component">
   <h4>Star Wars Search!</h4>
   <form>
-  <select [(ngModel)]="select" name="select">
-    <option value="starships">Ships</option>
-    <option value="people">People</option>
-    <option value="films">Films</option>
-    </select>
-  <input type="text" [(ngModel)]="term" name="term"/>
+    <select [(ngModel)]="select" name="select">
+      <option value="starships">Ships</option>
+      <option value="people">People</option>
+      <option value="films">Films</option>
+      </select>
+    <input type="text" [(ngModel)]="term" name="term"/>
 
-  <button (click)="search(select, term)">Go!</button>
+    <button (click)="search(select, term)">Go!</button>
   </form>
   <div *ngIf="response">
     {{response.results | json}}
